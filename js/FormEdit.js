@@ -13,6 +13,10 @@
         this.MIN_AGE = data.minAge || 18;
         this.MAX_AGE = data.maxAge || 50;
 
+        let inputAge = this.container.querySelector('input[name="age"]');
+        inputAge.min = this.MIN_AGE;
+        inputAge.max = this.MAX_AGE;
+
         let that = this;
 
         this.pubsub.subscribe('the_storage_is_empty', function( data ) {

@@ -7,6 +7,7 @@
     let tableUsers = new TableUsers({
         container: document.querySelector('.table_users'),
         pubsub: pubsub,
+        currency: ' $',
         headers:{
 
             first_name: 'Фамилия',

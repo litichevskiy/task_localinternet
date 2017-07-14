@@ -16,6 +16,7 @@
             age: 'Возраст',
             balance: 'Баланс'
         },
+
         list: storageUser.getList()
     });
 
@@ -23,7 +24,12 @@
 
     let editForm = new EditForm({
         container: document.querySelector('.form_edit_user_info'),
-        pubsub: pubsub
+        pubsub: pubsub,
+        errorClass: 'error',
+        minLengthl: 1,
+        maxLength: 15,
+        minAge: 18,
+        maxAge: 50
     });
 
     let listErrors = new ListErrors({
