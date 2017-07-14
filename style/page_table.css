@@ -1,0 +1,108 @@
+
+.main_container{
+    position: relative;
+    overflow: hidden;
+    max-width: 2000px;
+    height: 100vh;
+    margin: auto;
+    border-left: 1px solid rgb(199, 193, 193);
+    border-right: 1px solid rgb(199, 193, 193);
+}
+
+.main_container .main_block{
+    position: absolute;
+    top: 46px;
+    bottom: 0;
+    width: 100%;
+    display: -webkit-inline-box;
+    display: -webkit-inline-flex;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+}
+
+.main_container .block_table{
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    border-right: 1px solid rgb(199, 193, 193);
+}
+
+.main_container .block_errors{
+    width: 25%;
+    height: 100%;
+    overflow: auto;
+}
+
+.main_container .table{
+    width: 90%;
+    margin: 1.5em auto;
+    border: 1px solid rgb(177, 172, 172);
+    border-collapse: collapse;
+    margin-bottom: 0;
+}
+
+.table thead{
+    border-bottom: 1px solid rgb(230, 228, 228);
+    font-family: monospace;
+}
+
+.main_container .table thead th{
+    padding: 8px 0px;
+    color: rgb(76, 71, 71);
+    background: rgb(243, 243, 243);
+    border-right: 1px solid rgb(177, 172, 172);
+}
+
+.main_container .table tbody tr{
+    padding: 8px 0;
+    font-size: 1.1em;
+    text-align: center;
+    background-color: rgb(214, 236, 255);
+    cursor: pointer;
+    font-family: sans-serif;
+    color: rgb(64, 61, 61);
+}
+
+.main_container .table tbody tr td{
+    border-top: 1px solid rgb(177, 172, 172);
+    border-right: 1px solid rgb(177, 172, 172);
+}
+
+.main_container .table tbody tr:hover{
+    background-color: rgb(165, 241, 165);
+}
+
+@media(max-width:1100px){
+
+    .main_container .main_block{
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: reverse;
+        -webkit-flex-direction: column-reverse;
+            -ms-flex-direction: column-reverse;
+                flex-direction: column-reverse;
+    }
+
+    .main_container .table{
+        margin-top: 0;
+    }
+
+    .main_container .block_errors .list_errors{
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    .main_container .block_errors{
+        width: 100%;
+        height: auto;
+        max-height: 25%;
+        margin-top: 1em;
+        margin-bottom: 1em;
+    }
+}
+
+@media(max-width:1300px){
+
+    .main_container .block_table .table{
+        width: 99%;
+    }
+}

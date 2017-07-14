@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>users page</title>
+        <link rel="stylesheet" href="./style/reset.css">
+        <link rel="stylesheet" href="./style/nav_panel.css">
+        <link rel="stylesheet" href="./style/page_table.css">
+        <link rel="stylesheet" href="./style/listErrors.css">
+    </head>
+    <body>
+        <div class="main_container">
+            <nav class="nav_panel">
+                <ul class="list list_nav_panel">
+                    <li class="item_list_nav_panel">
+                        <a class="link link_nav_panel" href="./edit_page.html">edit form</a>
+                    </li>
+                    <li class="item_list_nav_panel fl_right">
+                        <a class="link link_nav_panel" data-role="clear_table" href="./users_page.html">clear table</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="main_block">
+                <div class="block_table">
+                    <table class="table table_users"></table>
+                </div>
+                <div class="block_errors">
+                    <ul class="list_errors list"></ul>
+                </div>
+            </div>
+        </div>
+        <script src="./utils/PubSub.js"></script>
+        <script src="./utils/searchData.js"></script>
+        <script src="./js/storage.js"></script>
+        <script src="./js/TableUsers.js"></script>
+        <script src="./js/fakeServerApi.js"></script>
+        <script src="./js/ListErrors.js"></script>
+        <script src="./js/init_page_users.js"></script>
+    </body>
+</html>

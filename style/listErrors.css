@@ -1,0 +1,30 @@
+
+.main_container .list_errors{
+    width: 90%;
+    margin: 1em auto;
+    margin-bottom: 0;
+}
+
+.main_container .list_errors li{
+    color: rgb(35, 35, 35);
+    background: rgb(255, 234, 232);
+    padding: 0 7px 5px;
+    margin-bottom: 4px;
+    position: relative;
+}
+
+.main_container .list_errors li div{
+    text-align: right;
+    position: relative;
+    display: inline-block;
+    background: rgb(228, 146, 140);
+    position: absolute;
+    right: 2px;
+    top: 2px;
+    padding: 0px 3px;
+}
+
+.list_errors li div span[data-role="close"]{
+    cursor: pointer;
+    color: black;
+}

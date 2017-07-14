@@ -1,0 +1,79 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>edit page</title>
+        <link rel="stylesheet" href="./style/reset.css">
+        <link rel="stylesheet" href="./style/nav_panel.css">
+        <link rel="stylesheet" href="./style/edit_form.css">
+        <link rel="stylesheet" href="./style/page_table_and_form.css">
+        <link rel="stylesheet" href="./style/listErrors.css">
+    </head>
+    <body>
+        <div class="main_container">
+            <nav class="nav_panel">
+                <ul class="list list_nav_panel">
+                    <li class="item_list_nav_panel">
+                        <a class="link link_nav_panel" href="./users_page.html">users</a>
+                    </li>
+                    <li class="item_list_nav_panel fl_right">
+                        <a class="link link_nav_panel" data-role="clear_table" href="./users_page.html">clear table</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="main_block">
+                <div class="block_table">
+                    <table class="table table_users"></table>
+                </div>
+                <div class="block_edit_form">
+                    <form name="edit_user_info" class="form_edit_user_info" tabindex="1" >
+                        <div class="container_input">
+                            <input  class="input" type="text"
+                                    name="first_name"
+                                    data-role="text"
+                                    placeholder="Фамилия" />
+                            <div class="help_content" data-role="first_name">от 1 до 15 символов</div>
+                        </div>
+                        <div class="container_input">
+                            <input  class="input"
+                                    type="text"
+                                    name="last_name"
+                                    data-role="text"
+                                    placeholder="Имя" />
+                            <div class="help_content" data-role="last_name">от 1 до 15 символов</div>
+                        </div>
+                        <div class="container_input">
+                            <input  class="input"
+                                    type="text"
+                                    name="patronymic"
+                                    data-role="text"
+                                    placeholder="Отчество" />
+                            <div class="help_content" data-role="patronymic">от 1 до 15 символов</div>
+                        </div>
+                        <div class="container_input">
+                            <input  class="input"
+                                    type="number"
+                                    name="age"
+                                    placeholder="Возраст"
+                                    min="18" max="50"
+                                    data-role="number" />
+                            <div class="help_content" data-role="age">от 18 до 50 лет</div>
+                        </div>
+                        <input type="hidden" name="id" data-role="" />
+                        <div class="text_right">
+                            <button class="button">сохранить</button>
+                        </div>
+                    </form>
+                    <ul class="list_errors list"></ul>
+                </div>
+            </div>
+        </div>
+        <script src="./utils/PubSub.js"></script>
+        <script src="./utils/searchData.js"></script>
+        <script src="./js/storage.js"></script>
+        <script src="./js/TableUsers.js"></script>
+        <script src="./js/fakeServerApi.js"></script>
+        <script src="./js/FormEdit.js"></script>
+        <script src="./js/ListErrors.js"></script>
+        <script src="./js/init_page_form.js"></script>
+    </body>
+</html>

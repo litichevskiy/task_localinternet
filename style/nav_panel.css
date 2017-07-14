@@ -1,0 +1,28 @@
+
+.main_container .nav_panel{
+    background: rgba(0, 0, 0, 0.7);
+    font-size: 1.3em;
+    padding: 5px 20px;
+    height: 46px;
+}
+
+.main_container .link_nav_panel{
+    margin: 2px 7px;
+    color: rgb(255, 193, 7);
+    -webkit-transition: 0.2s;
+    -o-transition: 0.2s;
+    transition: 0.2s;
+    font-family: sans-serif;
+}
+
+.main_container .link_nav_panel:hover{
+    color: rgb(232, 232, 232);
+}
+
+.nav_panel .item_list_nav_panel{
+    display: inline-block;
+}
+
+.fl_right{
+    float: right;
+}

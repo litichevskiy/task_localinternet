@@ -1,0 +1,60 @@
+
+.form_edit_user_info{
+    outline: none;
+    display: block;
+    width: 90%;
+    margin: 1.5em auto;
+    margin-bottom: 0;
+    padding: 0.4em 0.9em;
+    border: 1px solid rgb(230, 228, 228);
+    -webkit-border-radius: 3px;
+            border-radius: 3px;
+}
+
+.form_edit_user_info .container_input{
+    margin-top: 3px;
+}
+
+.form_edit_user_info .input{
+    border: 1px solid rgb(211, 211, 211);
+    outline: none;
+    width: 100%;
+    -webkit-border-radius: 5px;
+            border-radius: 5px;
+    font-size: 1em;
+    padding: 3px 7px;
+    color: rgb(38,38,38);
+}
+
+.form_edit_user_info .input:focus{
+    border: 1px solid rgb(160, 158, 158);
+}
+
+.form_edit_user_info .help_content{
+    color: rgb(49, 132, 208);
+    font-size: 0.6em;
+}
+
+.form_edit_user_info .button{
+    background: rgb(3, 169, 244);
+    border: none;
+    -webkit-border-radius: 5px;
+            border-radius: 5px;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    font-size: 1.1em;
+    padding: 3px 12px;
+    margin-top: 10px;
+}
+
+.text_right{
+    text-align: right;
+}
+
+.form_edit_user_info .error ~ .help_content{
+    color: rgb(230, 57, 57);
+}
+
+.form_edit_user_info .error{
+    border-color: rgb(230, 57, 57);
+}
