@@ -19,6 +19,7 @@
         this.pubsub.subscribe('user', this.addUser.bind( this ) );
         this.pubsub.subscribe('update_user_data', this.updateRow.bind( this ) );
         this.pubsub.subscribe('update_user_balance', this.replaseBalance.bind( this ) );
+        this.pubsub.subscribe('the_storage_is_empty', this.clearTable.bind( this ) );
     };
 
     let fn = TableUsers.prototype;
@@ -37,6 +38,18 @@
 
         this.tbody.addEventListener('click', this.publishClick.bind( this ) );
     };
+
+    fn.clearTable = function( data ) {
+
+        this.is_create_table = false;
+        this.list = data;
+
+        let thead = this.container.querySelector('thead'),
+            tbody = this.container.querySelector('tbody');
+
+        this.container.removeChild( thead );
+        this.container.removeChild( tbody );
+    },
 
     fn.publishClick = function( event ) {
 
@@ -67,6 +80,12 @@
             oldRow = this.tbody.querySelector('tr[data-id="'+data.id+'"]');
 
         this.tbody.replaceChild( newRow, oldRow );
+
+        let result = search( this.list, +data.id ),
+            index = this.list.indexOf( result );
+
+        if( index < 0 ) throw{};
+        else this.list.splice( index, 1, data );
     };
 
     fn.replaseBalance = function( data ) {

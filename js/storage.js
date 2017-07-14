@@ -86,7 +86,13 @@
 
             deleteStorare: function() {
 
-                localStorage.removeItem('__storage');
+                let storage = JSON.parse( localStorage.getItem('__storage') );
+
+                storage = [];
+                pubsub.publish('the_storage_is_empty', storage );
+
+                localStorage.setItem('__storage', JSON.stringify( storage ) );
+
             },
 
             init: function( data ) {

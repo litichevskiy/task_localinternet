@@ -33,9 +33,11 @@
 
     let del = document.querySelector('[data-role="clear_table"]');
 
-    del.addEventListener('click', function() {
+    del.addEventListener('click', function( event ) {
+
+        event.preventDefault();
 
         pubsub.publish('delete_storage');
-    });
+    }, true );
 
 })();

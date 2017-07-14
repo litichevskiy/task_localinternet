@@ -15,6 +15,13 @@
 
         let that = this;
 
+        this.pubsub.subscribe('the_storage_is_empty', function( data ) {
+
+            let inputs = that.container.querySelectorAll('input[data-role]');
+
+            clearValue( inputs );
+        });
+
         this.pubsub.subscribe( 'selected_user', function( data ) {
 
             setInputsValue( that.container, data );
@@ -51,12 +58,21 @@
                 if( item.value === '' ) continue;
 
                 data[item.name] = item.value;
-                item.value = '';
             }
+
+            clearValue( inputs );
 
             that.pubsub.publish('send_user_info', data );
 
         }, true );
+    };
+
+    function clearValue( list ) {
+
+        for( let i = 0; i < list.length; i++ ) {
+
+            list[i].value = '';
+        }
     };
 
     function addErrorClass( target, errorClass ) {

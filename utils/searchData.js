@@ -6,7 +6,7 @@
 
         list.every(function( item ) {
 
-            if( item.id !== id ) return true;
+            if( +item.id !== id ) return true;
 
             else {
                 result = item;

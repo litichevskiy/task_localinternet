@@ -12,6 +12,7 @@
         let that = this;
 
         this.pubsub.subscribe('new_error', this.addError.bind( this ) );
+        this.pubsub.subscribe('the_storage_is_empty', this.clearList.bind( this ) );
         this.container.addEventListener('click', function( event ) {
 
             let target = event.target;
@@ -43,6 +44,13 @@
         this.storage.splice( index, 1 );
 
         this.container.removeChild( li );
+    };
+
+    fn.clearList = function( data ) {
+
+        this.storage = [];
+
+        this.container.innerHTML = '';
     };
 
     function getParentElement( target, tagname ) {
